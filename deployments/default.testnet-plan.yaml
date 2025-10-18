@@ -1,0 +1,17 @@
+---
+id: 0
+name: "Paracoin Testnet Deployment"
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "https://blockstream.info/testnet/api"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: paracoin
+            expected-sender: ST000000000000000000002AMW42H # Replace with your testnet address
+            cost: 46180
+            path: contracts/paracoin.clar
+            clarity-version: 3
+            epoch: "3.0"

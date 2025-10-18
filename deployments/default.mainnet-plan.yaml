@@ -1,0 +1,17 @@
+---
+id: 0
+name: "Paracoin Mainnet Deployment"
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "https://blockstream.info/api"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: paracoin
+            expected-sender: SP000000000000000000002Q6VF78 # Replace with your mainnet address
+            cost: 46180
+            path: contracts/paracoin.clar
+            clarity-version: 3
+            epoch: "3.0"
